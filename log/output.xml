@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.6 on darwin)" generated="20231101 14:25:39.552" rpa="false" schemaversion="4">
+<suite id="s1" name="InstagramTests" source="/Users/macbook/IdeaProjects/InstagramRobot/tests/InstagramTests.robot">
+<test id="s1-t1" name="Se connecter à Instagram avec succès" line="12">
+<kw name="Aller sur la page Instagram" library="InstagramPage" type="SETUP">
+<kw name="Open Browser">
+<arg>${Datas.UrlInsta}</arg>
+<arg>chrome</arg>
+<msg timestamp="20231101 14:25:39.592" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20231101 14:25:39.592" endtime="20231101 14:25:39.593"/>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" starttime="20231101 14:25:39.594" endtime="20231101 14:25:39.594"/>
+</kw>
+<kw name="Set Selenium Implicit Wait">
+<arg>15s</arg>
+<status status="NOT RUN" starttime="20231101 14:25:39.596" endtime="20231101 14:25:39.596"/>
+</kw>
+<kw name="Click Element">
+<arg>${PLocaters.AccepterCookies}</arg>
+<status status="NOT RUN" starttime="20231101 14:25:39.598" endtime="20231101 14:25:39.598"/>
+</kw>
+<status status="FAIL" starttime="20231101 14:25:39.590" endtime="20231101 14:25:39.598"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<msg timestamp="20231101 14:25:39.600" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20231101 14:25:39.600" endtime="20231101 14:25:39.600">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" starttime="20231101 14:25:39.589" endtime="20231101 14:25:39.601">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-t2" name="Se connecter à Instagram mot de passe invalide" line="17">
+<kw name="Aller sur la page Instagram" library="InstagramPage" type="SETUP">
+<kw name="Open Browser">
+<arg>${Datas.UrlInsta}</arg>
+<arg>chrome</arg>
+<msg timestamp="20231101 14:25:39.603" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20231101 14:25:39.603" endtime="20231101 14:25:39.604"/>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" starttime="20231101 14:25:39.605" endtime="20231101 14:25:39.605"/>
+</kw>
+<kw name="Set Selenium Implicit Wait">
+<arg>15s</arg>
+<status status="NOT RUN" starttime="20231101 14:25:39.607" endtime="20231101 14:25:39.607"/>
+</kw>
+<kw name="Click Element">
+<arg>${PLocaters.AccepterCookies}</arg>
+<status status="NOT RUN" starttime="20231101 14:25:39.609" endtime="20231101 14:25:39.609"/>
+</kw>
+<status status="FAIL" starttime="20231101 14:25:39.601" endtime="20231101 14:25:39.610"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<msg timestamp="20231101 14:25:39.611" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20231101 14:25:39.611" endtime="20231101 14:25:39.611">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" starttime="20231101 14:25:39.601" endtime="20231101 14:25:39.612">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</test>
+<test id="s1-t3" name="Se connecter à Instagram nom d'utilisateur invalide" line="22">
+<kw name="Aller sur la page Instagram" library="InstagramPage" type="SETUP">
+<kw name="Open Browser">
+<arg>${Datas.UrlInsta}</arg>
+<arg>chrome</arg>
+<msg timestamp="20231101 14:25:39.615" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20231101 14:25:39.614" endtime="20231101 14:25:39.615"/>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" starttime="20231101 14:25:39.617" endtime="20231101 14:25:39.617"/>
+</kw>
+<kw name="Set Selenium Implicit Wait">
+<arg>15s</arg>
+<status status="NOT RUN" starttime="20231101 14:25:39.619" endtime="20231101 14:25:39.619"/>
+</kw>
+<kw name="Click Element">
+<arg>${PLocaters.AccepterCookies}</arg>
+<status status="NOT RUN" starttime="20231101 14:25:39.621" endtime="20231101 14:25:39.621"/>
+</kw>
+<status status="FAIL" starttime="20231101 14:25:39.613" endtime="20231101 14:25:39.621"/>
+</kw>
+<kw name="Close Browser" type="TEARDOWN">
+<msg timestamp="20231101 14:25:39.623" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20231101 14:25:39.623" endtime="20231101 14:25:39.624">No keyword with name 'Close Browser' found.</status>
+</kw>
+<status status="FAIL" starttime="20231101 14:25:39.612" endtime="20231101 14:25:39.624">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</test>
+<status status="FAIL" starttime="20231101 14:25:39.554" endtime="20231101 14:25:39.625"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="InstagramTests">InstagramTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231101 14:25:39.579" level="ERROR">Error in file '/Users/macbook/IdeaProjects/InstagramRobot/tests/InstagramTests.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/macbook/Library/Application Support/JetBrains/IdeaIC2023.2/plugins/robotframework-intellij/lib/robotframework_debug_adapter
+  /Users/macbook/IdeaProjects/InstagramRobot
+  /Users/macbook/Library/Application Support/JetBrains/IdeaIC2023.2/plugins/robotframework-intellij/lib
+  /Users/macbook/Library/Application Support/JetBrains/IdeaIC2023.2/plugins/robotframework-intellij/lib/robotframework_ls/vendored
+  /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python39.zip
+  /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9
+  /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload
+  /Users/macbook/Library/Python/3.9/lib/python/site-packages
+  /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/site-packages</msg>
+<msg timestamp="20231101 14:25:39.585" level="ERROR">Error in file '/Users/macbook/IdeaProjects/InstagramRobot/pages/InstagramPage.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/macbook/Library/Application Support/JetBrains/IdeaIC2023.2/plugins/robotframework-intellij/lib/robotframework_debug_adapter
+  /Users/macbook/IdeaProjects/InstagramRobot
+  /Users/macbook/Library/Application Support/JetBrains/IdeaIC2023.2/plugins/robotframework-intellij/lib
+  /Users/macbook/Library/Application Support/JetBrains/IdeaIC2023.2/plugins/robotframework-intellij/lib/robotframework_ls/vendored
+  /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python39.zip
+  /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9
+  /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload
+  /Users/macbook/Library/Python/3.9/lib/python/site-packages
+  /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/site-packages</msg>
+</errors>
+</robot>

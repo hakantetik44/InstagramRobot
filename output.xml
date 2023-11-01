@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on darwin)" generated="20231031 23:04:38.830" rpa="false" schemaversion="4">
-<suite id="s1" name="PayLeadRobot" source="/Users/macbook/IdeaProjects/PayLeadRobot">
-<suite id="s1-s1" name="Tests" source="/Users/macbook/IdeaProjects/PayLeadRobot/tests">
-<suite id="s1-s1-s1" name="InstagramTests" source="/Users/macbook/IdeaProjects/PayLeadRobot/tests/InstagramTests.robot">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on darwin)" generated="20231101 16:01:51.548" rpa="false" schemaversion="4">
+<suite id="s1" name="InstagramRobot" source="/Users/macbook/IdeaProjects/InstagramRobot">
+<suite id="s1-s1" name="Tests" source="/Users/macbook/IdeaProjects/InstagramRobot/tests">
+<suite id="s1-s1-s1" name="InstagramTests" source="/Users/macbook/IdeaProjects/InstagramRobot/tests/InstagramTests.robot">
 <test id="s1-s1-s1-t1" name="Se connecter à Instagram avec succès" line="12">
 <kw name="Aller sur la page Instagram" library="InstagramPage" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${Datas.UrlInsta}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231031 23:04:38.980" level="INFO">Opening browser 'chrome' to base url 'https://www.instagram.com/accounts/login/?hl=fr'.</msg>
-<status status="PASS" starttime="20231031 23:04:38.980" endtime="20231031 23:04:41.502"/>
+<msg timestamp="20231101 16:01:51.814" level="INFO">Opening browser 'chrome' to base url 'https://www.instagram.com/accounts/login/?hl=fr'.</msg>
+<status status="PASS" starttime="20231101 16:01:51.813" endtime="20231101 16:01:54.702"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231031 23:04:41.503" endtime="20231031 23:04:42.106"/>
+<status status="PASS" starttime="20231101 16:01:54.702" endtime="20231101 16:01:55.172"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20231031 23:04:42.106" endtime="20231031 23:04:42.107"/>
+<status status="PASS" starttime="20231101 16:01:55.172" endtime="20231101 16:01:55.173"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${PLocaters.AccepterCookies}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231031 23:04:42.109" level="INFO">Clicking element 'xpath=//button[text()='Autoriser tous les cookies']'.</msg>
-<status status="PASS" starttime="20231031 23:04:42.107" endtime="20231031 23:04:42.347"/>
+<msg timestamp="20231101 16:01:55.174" level="INFO">Clicking element 'xpath=//button[text()='Autoriser tous les cookies']'.</msg>
+<status status="PASS" starttime="20231101 16:01:55.173" endtime="20231101 16:01:55.251"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:38.980" endtime="20231031 23:04:42.347"/>
+<status status="PASS" starttime="20231101 16:01:51.813" endtime="20231101 16:01:55.252"/>
 </kw>
 <kw name="Vérifier Que Vous etes Sur La Page Instagram" library="InstagramPage">
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${PLocaters.btnSeconnectterFace}</arg>
 <arg>${Datas.expectedTextSeConnecterFace}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231031 23:04:42.368" level="INFO">Element 'css=._ab37' contains text 'Se connecter avec Facebook'.</msg>
-<status status="PASS" starttime="20231031 23:04:42.348" endtime="20231031 23:04:42.368"/>
+<msg timestamp="20231101 16:01:55.275" level="INFO">Element 'css=._ab37' contains text 'Se connecter avec Facebook'.</msg>
+<status status="PASS" starttime="20231101 16:01:55.252" endtime="20231101 16:01:55.275"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${PLocaters.btnInscription}</arg>
 <arg>${Datas.expectedTextInscription}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231031 23:04:42.384" level="INFO">Element 'css=._aacl._aaco._aacw._aad0._aad7' contains text 'Inscrivez-vous'.</msg>
-<status status="PASS" starttime="20231031 23:04:42.368" endtime="20231031 23:04:42.384"/>
+<msg timestamp="20231101 16:01:55.291" level="INFO">Element 'css=._aacl._aaco._aacw._aad0._aad7' contains text 'Inscrivez-vous'.</msg>
+<status status="PASS" starttime="20231101 16:01:55.275" endtime="20231101 16:01:55.291"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:42.348" endtime="20231031 23:04:42.384"/>
+<status status="PASS" starttime="20231101 16:01:55.252" endtime="20231101 16:01:55.291"/>
 </kw>
 <kw name="Entrer le nom d'utilisateur et le mot de passe" library="InstagramPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${PLocaters.placeNomDeUtilasateur}</arg>
 <arg>${Datas.Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231031 23:04:42.385" level="INFO">Typing text 'playhakanqa@outlook.com' into text field 'css=input[name='username']'.</msg>
-<status status="PASS" starttime="20231031 23:04:42.384" endtime="20231031 23:04:42.582"/>
+<msg timestamp="20231101 16:01:55.293" level="INFO">Typing text 'playhakanqa@outlook.com' into text field 'css=input[name='username']'.</msg>
+<status status="PASS" starttime="20231101 16:01:55.292" endtime="20231101 16:01:55.549"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Plocaters.placePassword}</arg>
 <arg>${Datas.Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231031 23:04:42.583" level="INFO">Typing text 'PayLead' into text field 'css=input[name='password']'.</msg>
-<status status="PASS" starttime="20231031 23:04:42.582" endtime="20231031 23:04:42.671"/>
+<msg timestamp="20231101 16:01:55.550" level="INFO">Typing text 'PayLead' into text field 'css=input[name='password']'.</msg>
+<status status="PASS" starttime="20231101 16:01:55.549" endtime="20231101 16:01:55.646"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231031 23:04:43.672" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231031 23:04:42.671" endtime="20231031 23:04:43.672"/>
+<msg timestamp="20231101 16:01:56.647" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231101 16:01:55.646" endtime="20231101 16:01:56.647"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${PLocaters.btnSeconnectter}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231031 23:04:43.674" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20231031 23:04:43.672" endtime="20231031 23:04:43.873"/>
+<msg timestamp="20231101 16:01:56.648" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231101 16:01:56.647" endtime="20231101 16:01:56.714"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:42.384" endtime="20231031 23:04:43.873"/>
+<status status="PASS" starttime="20231101 16:01:55.292" endtime="20231101 16:01:56.714"/>
 </kw>
 <kw name="Vérifier avec succès que la page Instagram a été connectée" library="InstagramPage">
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${Plocaters.btnAccueil}</arg>
 <arg>Accueil</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231031 23:04:48.172" level="INFO">Element 'xpath=//span[contains(text(),'Accueil')]' contains text 'Accueil'.</msg>
-<status status="PASS" starttime="20231031 23:04:43.873" endtime="20231031 23:04:48.172"/>
+<msg timestamp="20231101 16:02:04.576" level="INFO">Element 'xpath=//span[contains(text(),'Accueil')]' contains text 'Accueil'.</msg>
+<status status="PASS" starttime="20231101 16:01:56.714" endtime="20231101 16:02:04.576"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:43.873" endtime="20231031 23:04:48.172"/>
+<status status="PASS" starttime="20231101 16:01:56.714" endtime="20231101 16:02:04.576"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231031 23:04:48.173" endtime="20231031 23:04:48.272"/>
+<status status="PASS" starttime="20231101 16:02:04.576" endtime="20231101 16:02:05.113"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:38.979" endtime="20231031 23:04:48.273"/>
+<status status="PASS" starttime="20231101 16:01:51.812" endtime="20231101 16:02:05.113"/>
 </test>
 <test id="s1-s1-s1-t2" name="Se connecter à Instagram mot de passe invalide" line="17">
 <kw name="Aller sur la page Instagram" library="InstagramPage" type="SETUP">
@@ -97,93 +97,93 @@
 <arg>${Datas.UrlInsta}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231031 23:04:48.274" level="INFO">Opening browser 'chrome' to base url 'https://www.instagram.com/accounts/login/?hl=fr'.</msg>
-<status status="PASS" starttime="20231031 23:04:48.274" endtime="20231031 23:04:50.725"/>
+<msg timestamp="20231101 16:02:05.115" level="INFO">Opening browser 'chrome' to base url 'https://www.instagram.com/accounts/login/?hl=fr'.</msg>
+<status status="PASS" starttime="20231101 16:02:05.115" endtime="20231101 16:02:07.701"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231031 23:04:50.725" endtime="20231031 23:04:51.210"/>
+<status status="PASS" starttime="20231101 16:02:07.701" endtime="20231101 16:02:08.208"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20231031 23:04:51.210" endtime="20231031 23:04:51.211"/>
+<status status="PASS" starttime="20231101 16:02:08.208" endtime="20231101 16:02:08.210"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${PLocaters.AccepterCookies}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231031 23:04:51.213" level="INFO">Clicking element 'xpath=//button[text()='Autoriser tous les cookies']'.</msg>
-<status status="PASS" starttime="20231031 23:04:51.211" endtime="20231031 23:04:51.264"/>
+<msg timestamp="20231101 16:02:08.211" level="INFO">Clicking element 'xpath=//button[text()='Autoriser tous les cookies']'.</msg>
+<status status="PASS" starttime="20231101 16:02:08.210" endtime="20231101 16:02:08.298"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:48.273" endtime="20231031 23:04:51.265"/>
+<status status="PASS" starttime="20231101 16:02:05.115" endtime="20231101 16:02:08.298"/>
 </kw>
 <kw name="Vérifier Que Vous etes Sur La Page Instagram" library="InstagramPage">
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${PLocaters.btnSeconnectterFace}</arg>
 <arg>${Datas.expectedTextSeConnecterFace}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231031 23:04:51.284" level="INFO">Element 'css=._ab37' contains text 'Se connecter avec Facebook'.</msg>
-<status status="PASS" starttime="20231031 23:04:51.265" endtime="20231031 23:04:51.284"/>
+<msg timestamp="20231101 16:02:08.319" level="INFO">Element 'css=._ab37' contains text 'Se connecter avec Facebook'.</msg>
+<status status="PASS" starttime="20231101 16:02:08.299" endtime="20231101 16:02:08.319"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${PLocaters.btnInscription}</arg>
 <arg>${Datas.expectedTextInscription}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231031 23:04:51.298" level="INFO">Element 'css=._aacl._aaco._aacw._aad0._aad7' contains text 'Inscrivez-vous'.</msg>
-<status status="PASS" starttime="20231031 23:04:51.284" endtime="20231031 23:04:51.298"/>
+<msg timestamp="20231101 16:02:08.335" level="INFO">Element 'css=._aacl._aaco._aacw._aad0._aad7' contains text 'Inscrivez-vous'.</msg>
+<status status="PASS" starttime="20231101 16:02:08.319" endtime="20231101 16:02:08.335"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:51.265" endtime="20231031 23:04:51.299"/>
+<status status="PASS" starttime="20231101 16:02:08.298" endtime="20231101 16:02:08.335"/>
 </kw>
 <kw name="Entrer le dot de passe invalide" library="InstagramPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${PLocaters.placeNomDeUtilasateur}</arg>
 <arg>${Datas.Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231031 23:04:51.300" level="INFO">Typing text 'playhakanqa@outlook.com' into text field 'css=input[name='username']'.</msg>
-<status status="PASS" starttime="20231031 23:04:51.299" endtime="20231031 23:04:51.536"/>
+<msg timestamp="20231101 16:02:08.336" level="INFO">Typing text 'playhakanqa@outlook.com' into text field 'css=input[name='username']'.</msg>
+<status status="PASS" starttime="20231101 16:02:08.336" endtime="20231101 16:02:08.577"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Plocaters.placePassword}</arg>
 <arg>${Datas.invalidPassword}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231031 23:04:51.537" level="INFO">Typing text '578687rsfs' into text field 'css=input[name='password']'.</msg>
-<status status="PASS" starttime="20231031 23:04:51.536" endtime="20231031 23:04:51.625"/>
+<msg timestamp="20231101 16:02:08.579" level="INFO">Typing text '578687rsfs' into text field 'css=input[name='password']'.</msg>
+<status status="PASS" starttime="20231101 16:02:08.577" endtime="20231101 16:02:08.666"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231031 23:04:53.627" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231031 23:04:51.626" endtime="20231031 23:04:53.627"/>
+<msg timestamp="20231101 16:02:10.666" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231101 16:02:08.666" endtime="20231101 16:02:10.666"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${PLocaters.btnSeconnectter}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231031 23:04:53.629" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20231031 23:04:53.628" endtime="20231031 23:04:53.690"/>
+<msg timestamp="20231101 16:02:10.667" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231101 16:02:10.666" endtime="20231101 16:02:10.733"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:51.299" endtime="20231031 23:04:53.690"/>
+<status status="PASS" starttime="20231101 16:02:08.335" endtime="20231101 16:02:10.733"/>
 </kw>
 <kw name="Vérifier le message d'erreur pour le mot de passe" library="InstagramPage">
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${actual_textIncorrectPassword}</var>
 <arg>${PLocaters.MessageMotDePasseIncorrect}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231031 23:04:54.468" level="INFO">${actual_textIncorrectPassword} = Votre mot de passe est incorrect. Veuillez le vérifier.</msg>
-<status status="PASS" starttime="20231031 23:04:53.690" endtime="20231031 23:04:54.468"/>
+<msg timestamp="20231101 16:02:12.256" level="INFO">${actual_textIncorrectPassword} = Votre mot de passe est incorrect. Veuillez le vérifier.</msg>
+<status status="PASS" starttime="20231101 16:02:10.733" endtime="20231101 16:02:12.256"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${actual_textIncorrectPassword}</arg>
 <arg>${Datas.expectedTextPourIncorrectPassword}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231031 23:04:54.468" endtime="20231031 23:04:54.469"/>
+<status status="PASS" starttime="20231101 16:02:12.256" endtime="20231101 16:02:12.256"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:53.690" endtime="20231031 23:04:54.469"/>
+<status status="PASS" starttime="20231101 16:02:10.733" endtime="20231101 16:02:12.256"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231031 23:04:54.469" endtime="20231031 23:04:54.622"/>
+<status status="PASS" starttime="20231101 16:02:12.257" endtime="20231101 16:02:12.347"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:48.273" endtime="20231031 23:04:54.622"/>
+<status status="PASS" starttime="20231101 16:02:05.114" endtime="20231101 16:02:12.347"/>
 </test>
 <test id="s1-s1-s1-t3" name="Se connecter à Instagram nom d'utilisateur invalide" line="22">
 <kw name="Aller sur la page Instagram" library="InstagramPage" type="SETUP">
@@ -191,99 +191,99 @@
 <arg>${Datas.UrlInsta}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231031 23:04:54.624" level="INFO">Opening browser 'chrome' to base url 'https://www.instagram.com/accounts/login/?hl=fr'.</msg>
-<status status="PASS" starttime="20231031 23:04:54.623" endtime="20231031 23:04:57.174"/>
+<msg timestamp="20231101 16:02:12.350" level="INFO">Opening browser 'chrome' to base url 'https://www.instagram.com/accounts/login/?hl=fr'.</msg>
+<status status="PASS" starttime="20231101 16:02:12.349" endtime="20231101 16:02:14.826"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231031 23:04:57.174" endtime="20231031 23:04:57.674"/>
+<status status="PASS" starttime="20231101 16:02:14.826" endtime="20231101 16:02:15.340"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20231031 23:04:57.674" endtime="20231031 23:04:57.675"/>
+<status status="PASS" starttime="20231101 16:02:15.341" endtime="20231101 16:02:15.342"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${PLocaters.AccepterCookies}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231031 23:04:57.676" level="INFO">Clicking element 'xpath=//button[text()='Autoriser tous les cookies']'.</msg>
-<status status="PASS" starttime="20231031 23:04:57.676" endtime="20231031 23:04:57.732"/>
+<msg timestamp="20231101 16:02:15.343" level="INFO">Clicking element 'xpath=//button[text()='Autoriser tous les cookies']'.</msg>
+<status status="PASS" starttime="20231101 16:02:15.342" endtime="20231101 16:02:15.398"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:54.623" endtime="20231031 23:04:57.732"/>
+<status status="PASS" starttime="20231101 16:02:12.349" endtime="20231101 16:02:15.398"/>
 </kw>
 <kw name="Vérifier Que Vous etes Sur La Page Instagram" library="InstagramPage">
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${PLocaters.btnSeconnectterFace}</arg>
 <arg>${Datas.expectedTextSeConnecterFace}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231031 23:04:57.754" level="INFO">Element 'css=._ab37' contains text 'Se connecter avec Facebook'.</msg>
-<status status="PASS" starttime="20231031 23:04:57.733" endtime="20231031 23:04:57.755"/>
+<msg timestamp="20231101 16:02:15.419" level="INFO">Element 'css=._ab37' contains text 'Se connecter avec Facebook'.</msg>
+<status status="PASS" starttime="20231101 16:02:15.399" endtime="20231101 16:02:15.419"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${PLocaters.btnInscription}</arg>
 <arg>${Datas.expectedTextInscription}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231031 23:04:57.769" level="INFO">Element 'css=._aacl._aaco._aacw._aad0._aad7' contains text 'Inscrivez-vous'.</msg>
-<status status="PASS" starttime="20231031 23:04:57.755" endtime="20231031 23:04:57.769"/>
+<msg timestamp="20231101 16:02:15.435" level="INFO">Element 'css=._aacl._aaco._aacw._aad0._aad7' contains text 'Inscrivez-vous'.</msg>
+<status status="PASS" starttime="20231101 16:02:15.419" endtime="20231101 16:02:15.435"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:57.732" endtime="20231031 23:04:57.769"/>
+<status status="PASS" starttime="20231101 16:02:15.399" endtime="20231101 16:02:15.435"/>
 </kw>
 <kw name="Entrer le nom d'utilisateur invalide" library="InstagramPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${PLocaters.placeNomDeUtilasateur}</arg>
 <arg>${Datas.invalidNomDeUtilisateur}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231031 23:04:57.770" level="INFO">Typing text 'hmamsdfs@gmail.com' into text field 'css=input[name='username']'.</msg>
-<status status="PASS" starttime="20231031 23:04:57.770" endtime="20231031 23:04:57.991"/>
+<msg timestamp="20231101 16:02:15.436" level="INFO">Typing text 'hmamsdfs@gmail.com' into text field 'css=input[name='username']'.</msg>
+<status status="PASS" starttime="20231101 16:02:15.435" endtime="20231101 16:02:15.617"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Plocaters.placePassword}</arg>
 <arg>${Datas.Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231031 23:04:57.992" level="INFO">Typing text 'PayLead' into text field 'css=input[name='password']'.</msg>
-<status status="PASS" starttime="20231031 23:04:57.991" endtime="20231031 23:04:58.081"/>
+<msg timestamp="20231101 16:02:15.619" level="INFO">Typing text 'PayLead' into text field 'css=input[name='password']'.</msg>
+<status status="PASS" starttime="20231101 16:02:15.618" endtime="20231101 16:02:15.712"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231031 23:05:00.083" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231031 23:04:58.081" endtime="20231031 23:05:00.083"/>
+<msg timestamp="20231101 16:02:17.713" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231101 16:02:15.712" endtime="20231101 16:02:17.713"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${PLocaters.btnSeconnectter}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231031 23:05:00.084" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20231031 23:05:00.083" endtime="20231031 23:05:00.156"/>
+<msg timestamp="20231101 16:02:17.714" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231101 16:02:17.713" endtime="20231101 16:02:17.764"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:57.769" endtime="20231031 23:05:00.156"/>
+<status status="PASS" starttime="20231101 16:02:15.435" endtime="20231101 16:02:17.764"/>
 </kw>
 <kw name="Vérifier le message d'erreur pour le nom d'utilisateur invalide" library="InstagramPage">
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${actual_textInvalideNom}</var>
 <arg>${PLocaters.MessageNomDeUtilisateurIncorrect}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231031 23:05:00.584" level="INFO">${actual_textInvalideNom} = Désolé, votre mot de passe est incorrect. Veuillez vérifier votre mot de passe.</msg>
-<status status="PASS" starttime="20231031 23:05:00.156" endtime="20231031 23:05:00.584"/>
+<msg timestamp="20231101 16:02:18.504" level="INFO">${actual_textInvalideNom} = Désolé, votre mot de passe est incorrect. Veuillez vérifier votre mot de passe.</msg>
+<status status="PASS" starttime="20231101 16:02:17.764" endtime="20231101 16:02:18.504"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${actual_textInvalideNom}</arg>
 <arg>${Datas.expectedTextPourIncorrectNomDeUtilisateur}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231031 23:05:00.584" endtime="20231031 23:05:00.585"/>
+<status status="PASS" starttime="20231101 16:02:18.504" endtime="20231101 16:02:18.505"/>
 </kw>
-<status status="PASS" starttime="20231031 23:05:00.156" endtime="20231031 23:05:00.585"/>
+<status status="PASS" starttime="20231101 16:02:17.764" endtime="20231101 16:02:18.505"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231031 23:05:00.585" endtime="20231031 23:05:00.683"/>
+<status status="PASS" starttime="20231101 16:02:18.505" endtime="20231101 16:02:18.599"/>
 </kw>
-<status status="PASS" starttime="20231031 23:04:54.622" endtime="20231031 23:05:00.683"/>
+<status status="PASS" starttime="20231101 16:02:12.348" endtime="20231101 16:02:18.599"/>
 </test>
-<status status="PASS" starttime="20231031 23:04:38.851" endtime="20231031 23:05:00.683"/>
+<status status="PASS" starttime="20231101 16:01:51.574" endtime="20231101 16:02:18.600"/>
 </suite>
-<status status="PASS" starttime="20231031 23:04:38.850" endtime="20231031 23:05:00.685"/>
+<status status="PASS" starttime="20231101 16:01:51.573" endtime="20231101 16:02:18.601"/>
 </suite>
-<status status="PASS" starttime="20231031 23:04:38.832" endtime="20231031 23:05:00.686"/>
+<status status="PASS" starttime="20231101 16:01:51.550" endtime="20231101 16:02:18.602"/>
 </suite>
 <statistics>
 <total>
@@ -292,9 +292,9 @@
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="PayLeadRobot">PayLeadRobot</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1" name="Tests">PayLeadRobot.Tests</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="InstagramTests">PayLeadRobot.Tests.InstagramTests</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="InstagramRobot">InstagramRobot</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Tests">InstagramRobot.Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="InstagramTests">InstagramRobot.Tests.InstagramTests</stat>
 </suite>
 </statistics>
 <errors>
