@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PayLeadRobot.iml" filepath="$PROJECT_DIR$/PayLeadRobot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/instagramRobot.iml" filepath="$PROJECT_DIR$/instagramRobot.iml" />
     </modules>
   </component>
 </project>
