@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on darwin)" generated="20231101 20:03:36.251" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on darwin)" generated="20231102 08:24:22.078" rpa="false" schemaversion="4">
 <suite id="s1" name="InstagramRobot" source="/Users/macbook/IdeaProjects/InstagramRobot">
 <suite id="s1-s1" name="Tests" source="/Users/macbook/IdeaProjects/InstagramRobot/tests">
 <suite id="s1-s1-s1" name="InstagramTests" source="/Users/macbook/IdeaProjects/InstagramRobot/tests/InstagramTests.robot">
@@ -7,296 +7,203 @@
 <kw name="Aller sur la page Instagram" library="InstagramPage" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${Datas.UrlInsta}</arg>
-<arg>chrome</arg>
+<arg>headlesschrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231101 20:03:36.407" level="INFO">Opening browser 'chrome' to base url 'https://www.instagram.com/accounts/login/?hl=fr'.</msg>
-<status status="PASS" starttime="20231101 20:03:36.406" endtime="20231101 20:03:39.085"/>
+<msg timestamp="20231102 08:24:22.231" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.instagram.com/accounts/login/?hl=fr'.</msg>
+<status status="PASS" starttime="20231102 08:24:22.230" endtime="20231102 08:24:24.803"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231101 20:03:39.085" endtime="20231101 20:03:39.559"/>
+<status status="PASS" starttime="20231102 08:24:24.804" endtime="20231102 08:24:25.297"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>15s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20231101 20:03:39.559" endtime="20231101 20:03:39.561"/>
+<status status="PASS" starttime="20231102 08:24:25.297" endtime="20231102 08:24:25.298"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${PLocaters.AccepterCookies}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:39.563" level="INFO">Clicking element 'xpath=//button[text()='Autoriser tous les cookies']'.</msg>
-<status status="PASS" starttime="20231101 20:03:39.561" endtime="20231101 20:03:39.680"/>
+<msg timestamp="20231102 08:24:25.299" level="INFO">Clicking element 'xpath=//button[text()='Autoriser tous les cookies']'.</msg>
+<status status="PASS" starttime="20231102 08:24:25.298" endtime="20231102 08:24:25.355"/>
 </kw>
-<status status="PASS" starttime="20231101 20:03:36.406" endtime="20231101 20:03:39.680"/>
+<status status="PASS" starttime="20231102 08:24:22.229" endtime="20231102 08:24:25.355"/>
 </kw>
 <kw name="Vérifier Que Vous etes Sur La Page Instagram" library="InstagramPage">
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${PLocaters.btnSeconnectterFace}</arg>
 <arg>${Datas.expectedTextSeConnecterFace}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231101 20:03:39.700" level="INFO">Element 'css=._ab37' contains text 'Se connecter avec Facebook'.</msg>
-<status status="PASS" starttime="20231101 20:03:39.681" endtime="20231101 20:03:39.700"/>
+<msg timestamp="20231102 08:24:25.376" level="INFO">Element 'css=._ab37' contains text 'Se connecter avec Facebook'.</msg>
+<status status="PASS" starttime="20231102 08:24:25.356" endtime="20231102 08:24:25.376"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${PLocaters.btnInscription}</arg>
 <arg>${Datas.expectedTextInscription}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231101 20:03:39.718" level="INFO">Element 'css=._aacl._aaco._aacw._aad0._aad7' contains text 'Inscrivez-vous'.</msg>
-<status status="PASS" starttime="20231101 20:03:39.700" endtime="20231101 20:03:39.718"/>
+<msg timestamp="20231102 08:24:25.392" level="INFO">Element 'css=._aacl._aaco._aacw._aad0._aad7' contains text 'Inscrivez-vous'.</msg>
+<status status="PASS" starttime="20231102 08:24:25.376" endtime="20231102 08:24:25.392"/>
 </kw>
-<status status="PASS" starttime="20231101 20:03:39.681" endtime="20231101 20:03:39.718"/>
+<status status="PASS" starttime="20231102 08:24:25.355" endtime="20231102 08:24:25.392"/>
 </kw>
 <kw name="Entrer le nom d'utilisateur et le mot de passe" library="InstagramPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${PLocaters.placeNomDeUtilasateur}</arg>
 <arg>${Datas.Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:39.720" level="INFO">Typing text 'playhakanqa@outlook.com' into text field 'css=input[name='username']'.</msg>
-<status status="PASS" starttime="20231101 20:03:39.719" endtime="20231101 20:03:39.965"/>
+<msg timestamp="20231102 08:24:25.393" level="INFO">Typing text 'playhakanqa@outlook.com' into text field 'css=input[name='username']'.</msg>
+<status status="PASS" starttime="20231102 08:24:25.392" endtime="20231102 08:24:25.616"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Plocaters.placePassword}</arg>
 <arg>${Datas.Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:39.966" level="INFO">Typing text 'PayLead' into text field 'css=input[name='password']'.</msg>
-<status status="PASS" starttime="20231101 20:03:39.965" endtime="20231101 20:03:40.056"/>
+<msg timestamp="20231102 08:24:25.617" level="INFO">Typing text 'PayLead' into text field 'css=input[name='password']'.</msg>
+<status status="PASS" starttime="20231102 08:24:25.616" endtime="20231102 08:24:25.689"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231101 20:03:41.057" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20231101 20:03:40.056" endtime="20231101 20:03:41.057"/>
+<msg timestamp="20231102 08:24:26.691" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231102 08:24:25.689" endtime="20231102 08:24:26.692"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${PLocaters.btnSeconnectter}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:41.059" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20231101 20:03:41.057" endtime="20231101 20:03:41.104"/>
+<msg timestamp="20231102 08:24:26.694" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231102 08:24:26.692" endtime="20231102 08:24:26.762"/>
 </kw>
-<status status="PASS" starttime="20231101 20:03:39.718" endtime="20231101 20:03:41.104"/>
+<status status="PASS" starttime="20231102 08:24:25.392" endtime="20231102 08:24:26.762"/>
 </kw>
 <kw name="Vérifier avec succès que la page Instagram a été connectée" library="InstagramPage">
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${Plocaters.btnAccueil}</arg>
 <arg>Accueil</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231101 20:03:45.242" level="INFO">Element 'xpath=//span[contains(text(),'Accueil')]' contains text 'Accueil'.</msg>
-<status status="PASS" starttime="20231101 20:03:41.105" endtime="20231101 20:03:45.242"/>
+<msg timestamp="20231102 08:24:33.902" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=118.0.5993.117)
+Stacktrace:
+0   chromedriver                        0x000000010dba8e08 chromedriver + 5025288
+1   chromedriver                        0x000000010db9fc23 chromedriver + 4987939
+2   chromedriver                        0x000000010d741e67 chromedriver + 409191
+3   chromedriver                        0x000000010d715be4 chromedriver + 228324
+4   chromedriver                        0x000000010d7bdebf chromedriver + 917183
+5   chromedriver                        0x000000010d7d3b56 chromedriver + 1006422
+6   chromedriver                        0x000000010d7b82b3 chromedriver + 893619
+7   chromedriver                        0x000000010d782eb9 chromedriver + 675513
+8   chromedriver                        0x000000010d7840ee chromedriver + 680174
+9   chromedriver                        0x000000010db6a819 chromedriver + 4769817
+10  chromedriver                        0x000000010db6f893 chromedriver + 4790419
+11  chromedriver                        0x000000010db7666e chromedriver + 4818542
+12  chromedriver                        0x000000010db705bd chromedriver + 4793789
+13  chromedriver                        0x000000010db4298c chromedriver + 4606348
+14  chromedriver                        0x000000010db8eb78 chromedriver + 4918136
+15  chromedriver                        0x000000010db8ed30 chromedriver + 4918576
+16  chromedriver                        0x000000010db9f85e chromedriver + 4986974
+17  libsystem_pthread.dylib             0x00007ff812181202 _pthread_start + 99
+18  libsystem_pthread.dylib             0x00007ff81217cbab thread_start + 15
+</msg>
+<msg timestamp="20231102 08:24:33.902" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=118.0.5993.117)
+Stacktrace:
+0   chromedriver                        0x000000010dba8e08 chromedriver + 5025288
+1   chromedriver                        0x000000010db9fc23 chromedriver + 4987939
+2   chromedriver                        0x000000010d741e67 chromedriver + 409191
+3   chromedriver                        0x000000010d715be4 chromedriver + 228324
+4   chromedriver                        0x000000010d7bdebf chromedriver + 917183
+5   chromedriver                        0x000000010d7d3b56 chromedriver + 1006422
+6   chromedriver                        0x000000010d7b82b3 chromedriver + 893619
+7   chromedriver                        0x000000010d782eb9 chromedriver + 675513
+8   chromedriver                        0x000000010d7840ee chromedriver + 680174
+9   chromedriver                        0x000000010db6a819 chromedriver + 4769817
+10  chromedriver                        0x000000010db6f893 chromedriver + 4790419
+11  chromedriver                        0x000000010db7666e chromedriver + 4818542
+12  chromedriver                        0x000000010db705bd chromedriver + 4793789
+13  chromedriver                        0x000000010db4298c chromedriver + 4606348
+14  chromedriver                        0x000000010db8eb78 chromedriver + 4918136
+15  chromedriver                        0x000000010db8ed30 chromedriver + 4918576
+16  chromedriver                        0x000000010db9f85e chromedriver + 4986974
+17  libsystem_pthread.dylib             0x00007ff812181202 _pthread_start + 99
+18  libsystem_pthread.dylib             0x00007ff81217cbab thread_start + 15
+</msg>
+<status status="FAIL" starttime="20231102 08:24:26.763" endtime="20231102 08:24:33.913"/>
 </kw>
-<status status="PASS" starttime="20231101 20:03:41.104" endtime="20231101 20:03:45.242"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231101 20:03:45.243" endtime="20231101 20:03:45.334"/>
-</kw>
-<status status="PASS" starttime="20231101 20:03:36.405" endtime="20231101 20:03:45.334"/>
-</test>
-<test id="s1-s1-s1-t2" name="Se connecter à Instagram mot de passe invalide" line="17">
-<kw name="Aller sur la page Instagram" library="InstagramPage" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${Datas.UrlInsta}</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231101 20:03:45.336" level="INFO">Opening browser 'chrome' to base url 'https://www.instagram.com/accounts/login/?hl=fr'.</msg>
-<status status="PASS" starttime="20231101 20:03:45.335" endtime="20231101 20:03:47.754"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231101 20:03:47.754" endtime="20231101 20:03:48.262"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>15s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20231101 20:03:48.262" endtime="20231101 20:03:48.263"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${PLocaters.AccepterCookies}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:48.265" level="INFO">Clicking element 'xpath=//button[text()='Autoriser tous les cookies']'.</msg>
-<status status="PASS" starttime="20231101 20:03:48.264" endtime="20231101 20:03:48.363"/>
-</kw>
-<status status="PASS" starttime="20231101 20:03:45.335" endtime="20231101 20:03:48.363"/>
-</kw>
-<kw name="Vérifier Que Vous etes Sur La Page Instagram" library="InstagramPage">
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>${PLocaters.btnSeconnectterFace}</arg>
-<arg>${Datas.expectedTextSeConnecterFace}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231101 20:03:48.397" level="INFO">Element 'css=._ab37' contains text 'Se connecter avec Facebook'.</msg>
-<status status="PASS" starttime="20231101 20:03:48.363" endtime="20231101 20:03:48.397"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>${PLocaters.btnInscription}</arg>
-<arg>${Datas.expectedTextInscription}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231101 20:03:48.414" level="INFO">Element 'css=._aacl._aaco._aacw._aad0._aad7' contains text 'Inscrivez-vous'.</msg>
-<status status="PASS" starttime="20231101 20:03:48.397" endtime="20231101 20:03:48.414"/>
-</kw>
-<status status="PASS" starttime="20231101 20:03:48.363" endtime="20231101 20:03:48.414"/>
-</kw>
-<kw name="Entrer le dot de passe invalide" library="InstagramPage">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${PLocaters.placeNomDeUtilasateur}</arg>
-<arg>${Datas.Email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:48.416" level="INFO">Typing text 'playhakanqa@outlook.com' into text field 'css=input[name='username']'.</msg>
-<status status="PASS" starttime="20231101 20:03:48.415" endtime="20231101 20:03:48.677"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Plocaters.placePassword}</arg>
-<arg>${Datas.invalidPassword}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:48.679" level="INFO">Typing text '578687rsfs' into text field 'css=input[name='password']'.</msg>
-<status status="PASS" starttime="20231101 20:03:48.677" endtime="20231101 20:03:48.795"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231101 20:03:50.795" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231101 20:03:48.795" endtime="20231101 20:03:50.795"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${PLocaters.btnSeconnectter}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:50.796" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20231101 20:03:50.795" endtime="20231101 20:03:50.838"/>
-</kw>
-<status status="PASS" starttime="20231101 20:03:48.415" endtime="20231101 20:03:50.838"/>
-</kw>
-<kw name="Vérifier le message d'erreur pour le mot de passe" library="InstagramPage">
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${actual_textIncorrectPassword}</var>
-<arg>${PLocaters.MessageMotDePasseIncorrect}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:51.813" level="INFO">${actual_textIncorrectPassword} = Votre mot de passe est incorrect. Veuillez le vérifier.</msg>
-<status status="PASS" starttime="20231101 20:03:50.838" endtime="20231101 20:03:51.813"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${actual_textIncorrectPassword}</arg>
-<arg>${Datas.expectedTextPourIncorrectPassword}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231101 20:03:51.813" endtime="20231101 20:03:51.813"/>
-</kw>
-<status status="PASS" starttime="20231101 20:03:50.838" endtime="20231101 20:03:51.813"/>
+<status status="FAIL" starttime="20231102 08:24:26.762" endtime="20231102 08:24:33.913"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231101 20:03:51.814" endtime="20231101 20:03:51.902"/>
+<status status="PASS" starttime="20231102 08:24:33.914" endtime="20231102 08:24:34.054"/>
 </kw>
-<status status="PASS" starttime="20231101 20:03:45.335" endtime="20231101 20:03:51.902"/>
+<status status="FAIL" starttime="20231102 08:24:22.229" endtime="20231102 08:24:34.055">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=118.0.5993.117)
+Stacktrace:
+0   chromedriver                        0x000000010dba8e08 chromedriver + 5025288
+1   chromedriver                        0x000000010db9fc23 chromedriver + 4987939
+2   chromedriver                        0x000000010d741e67 chromedriver + 409191
+3   chromedriver                        0x000000010d715be4 chromedriver + 228324
+4   chromedriver                        0x000000010d7bdebf chromedriver + 917183
+5   chromedriver                        0x000000010d7d3b56 chromedriver + 1006422
+6   chromedriver                        0x000000010d7b82b3 chromedriver + 893619
+7   chromedriver                        0x000000010d782eb9 chromedriver + 675513
+8   chromedriver                        0x000000010d7840ee chromedriver + 680174
+9   chromedriver                        0x000000010db6a819 chromedriver + 4769817
+10  chromedriver                        0x000000010db6f893 chromedriver + 4790419
+11  chromedriver                        0x000000010db7666e chromedriver + 4818542
+12  chromedriver                        0x000000010db705bd chromedriver + 4793789
+13  chromedriver                        0x000000010db4298c chromedriver + 4606348
+14  chromedriver                        0x000000010db8eb78 chromedriver + 4918136
+15  chromedriver                        0x000000010db8ed30 chromedriver + 4918576
+16  chromedriver                        0x000000010db9f85e chromedriver + 4986974
+17  libsystem_pthread.dylib             0x00007ff812181202 _pthread_start + 99
+18  libsystem_pthread.dylib             0x00007ff81217cbab thread_start + 15
+</status>
 </test>
-<test id="s1-s1-s1-t3" name="Se connecter à Instagram nom d'utilisateur invalide" line="22">
-<kw name="Aller sur la page Instagram" library="InstagramPage" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${Datas.UrlInsta}</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231101 20:03:51.905" level="INFO">Opening browser 'chrome' to base url 'https://www.instagram.com/accounts/login/?hl=fr'.</msg>
-<status status="PASS" starttime="20231101 20:03:51.904" endtime="20231101 20:03:54.342"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231101 20:03:54.343" endtime="20231101 20:03:54.813"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>15s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20231101 20:03:54.814" endtime="20231101 20:03:54.815"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${PLocaters.AccepterCookies}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:54.816" level="INFO">Clicking element 'xpath=//button[text()='Autoriser tous les cookies']'.</msg>
-<status status="PASS" starttime="20231101 20:03:54.815" endtime="20231101 20:03:54.917"/>
-</kw>
-<status status="PASS" starttime="20231101 20:03:51.903" endtime="20231101 20:03:54.917"/>
-</kw>
-<kw name="Vérifier Que Vous etes Sur La Page Instagram" library="InstagramPage">
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>${PLocaters.btnSeconnectterFace}</arg>
-<arg>${Datas.expectedTextSeConnecterFace}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231101 20:03:54.938" level="INFO">Element 'css=._ab37' contains text 'Se connecter avec Facebook'.</msg>
-<status status="PASS" starttime="20231101 20:03:54.917" endtime="20231101 20:03:54.938"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>${PLocaters.btnInscription}</arg>
-<arg>${Datas.expectedTextInscription}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231101 20:03:54.954" level="INFO">Element 'css=._aacl._aaco._aacw._aad0._aad7' contains text 'Inscrivez-vous'.</msg>
-<status status="PASS" starttime="20231101 20:03:54.938" endtime="20231101 20:03:54.954"/>
-</kw>
-<status status="PASS" starttime="20231101 20:03:54.917" endtime="20231101 20:03:54.954"/>
-</kw>
-<kw name="Entrer le nom d'utilisateur invalide" library="InstagramPage">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${PLocaters.placeNomDeUtilasateur}</arg>
-<arg>${Datas.invalidNomDeUtilisateur}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:54.956" level="INFO">Typing text 'hmamsdfs@gmail.com' into text field 'css=input[name='username']'.</msg>
-<status status="PASS" starttime="20231101 20:03:54.955" endtime="20231101 20:03:55.176"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Plocaters.placePassword}</arg>
-<arg>${Datas.Password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:55.177" level="INFO">Typing text 'PayLead' into text field 'css=input[name='password']'.</msg>
-<status status="PASS" starttime="20231101 20:03:55.176" endtime="20231101 20:03:55.257"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231101 20:03:57.257" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231101 20:03:55.257" endtime="20231101 20:03:57.258"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${PLocaters.btnSeconnectter}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:57.259" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20231101 20:03:57.258" endtime="20231101 20:03:57.326"/>
-</kw>
-<status status="PASS" starttime="20231101 20:03:54.954" endtime="20231101 20:03:57.326"/>
-</kw>
-<kw name="Vérifier le message d'erreur pour le nom d'utilisateur invalide" library="InstagramPage">
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${actual_textInvalideNom}</var>
-<arg>${PLocaters.MessageNomDeUtilisateurIncorrect}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20231101 20:03:57.693" level="INFO">${actual_textInvalideNom} = Désolé, votre mot de passe est incorrect. Veuillez vérifier votre mot de passe.</msg>
-<status status="PASS" starttime="20231101 20:03:57.327" endtime="20231101 20:03:57.693"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${actual_textInvalideNom}</arg>
-<arg>${Datas.expectedTextPourIncorrectNomDeUtilisateur}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20231101 20:03:57.693" endtime="20231101 20:03:57.694"/>
-</kw>
-<status status="PASS" starttime="20231101 20:03:57.326" endtime="20231101 20:03:57.694"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231101 20:03:57.694" endtime="20231101 20:03:57.789"/>
-</kw>
-<status status="PASS" starttime="20231101 20:03:51.903" endtime="20231101 20:03:57.789"/>
-</test>
-<status status="PASS" starttime="20231101 20:03:36.272" endtime="20231101 20:03:57.790"/>
+<status status="FAIL" starttime="20231102 08:24:22.101" endtime="20231102 08:24:34.055"/>
 </suite>
-<status status="PASS" starttime="20231101 20:03:36.271" endtime="20231101 20:03:57.792"/>
+<status status="FAIL" starttime="20231102 08:24:22.100" endtime="20231102 08:24:34.057"/>
 </suite>
-<status status="PASS" starttime="20231101 20:03:36.253" endtime="20231101 20:03:57.793"/>
+<status status="FAIL" starttime="20231102 08:24:22.080" endtime="20231102 08:24:34.057"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="InstagramRobot">InstagramRobot</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1" name="Tests">InstagramRobot.Tests</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="InstagramTests">InstagramRobot.Tests.InstagramTests</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="InstagramRobot">InstagramRobot</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">InstagramRobot.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="InstagramTests">InstagramRobot.Tests.InstagramTests</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231102 08:24:22.226" level="ERROR">Error in file '/Users/macbook/IdeaProjects/InstagramRobot/pages/InstagramPage.robot' on line 57: Creating keyword 'Essaye de te connecter avec un nom d'utilisateur et un mot de passe vides' failed: User keyword cannot be empty.</msg>
+<msg timestamp="20231102 08:24:33.902" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=118.0.5993.117)
+Stacktrace:
+0   chromedriver                        0x000000010dba8e08 chromedriver + 5025288
+1   chromedriver                        0x000000010db9fc23 chromedriver + 4987939
+2   chromedriver                        0x000000010d741e67 chromedriver + 409191
+3   chromedriver                        0x000000010d715be4 chromedriver + 228324
+4   chromedriver                        0x000000010d7bdebf chromedriver + 917183
+5   chromedriver                        0x000000010d7d3b56 chromedriver + 1006422
+6   chromedriver                        0x000000010d7b82b3 chromedriver + 893619
+7   chromedriver                        0x000000010d782eb9 chromedriver + 675513
+8   chromedriver                        0x000000010d7840ee chromedriver + 680174
+9   chromedriver                        0x000000010db6a819 chromedriver + 4769817
+10  chromedriver                        0x000000010db6f893 chromedriver + 4790419
+11  chromedriver                        0x000000010db7666e chromedriver + 4818542
+12  chromedriver                        0x000000010db705bd chromedriver + 4793789
+13  chromedriver                        0x000000010db4298c chromedriver + 4606348
+14  chromedriver                        0x000000010db8eb78 chromedriver + 4918136
+15  chromedriver                        0x000000010db8ed30 chromedriver + 4918576
+16  chromedriver                        0x000000010db9f85e chromedriver + 4986974
+17  libsystem_pthread.dylib             0x00007ff812181202 _pthread_start + 99
+18  libsystem_pthread.dylib             0x00007ff81217cbab thread_start + 15
+</msg>
 </errors>
 </robot>

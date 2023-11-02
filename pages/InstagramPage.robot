@@ -5,7 +5,7 @@ Variables    ../locators/Locators.py
 
 *** Keywords ***
 Aller sur la page Instagram
-   Open Browser   ${Datas.UrlInsta}    chrome   headless=True
+   Open Browser   ${Datas.UrlInsta}    headlesschrome
    Maximize Browser Window
    Set Selenium Implicit Wait    15s
    Click Element    ${PLocaters.AccepterCookies}
@@ -53,3 +53,5 @@ Vérifier le message d'erreur pour le nom d'utilisateur invalide
 
     ${actual_textInvalideNom}   Get Text    ${PLocaters.MessageNomDeUtilisateurIncorrect}
     Should Be Equal       ${actual_textInvalideNom}     ${Datas.expectedTextPourIncorrectNomDeUtilisateur}
+
+Essaye de te connecter avec un nom d'utilisateur et un mot de passe vides

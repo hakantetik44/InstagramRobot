@@ -24,5 +24,8 @@ Se connecter à Instagram nom d'utilisateur invalide
      Entrer le nom d'utilisateur invalide
      Vérifier le message d'erreur pour le nom d'utilisateur invalide
 
+Essaye de te connecter avec un nom d'utilisateur et un mot de passe vides
+
+
 
 
