@@ -1,3 +1,4 @@
+
 name: CI/CD Pipeline
 
 on:
@@ -23,11 +24,13 @@ jobs:
         python3 -m venv venv
         source venv/bin/activate
         pip install -r requirements.txt
+        pip install robotframework-seleniumlibrary
 
     - name: Run tests
       run: |
         source venv/bin/activate
-        python3 -m robot tests/InstagramTests.robot
+        # Robot Framework ayarlarına göre başsız bir modda çalıştırmak için tarayıcı seçeneklerini belirtin
+        BROWSER=headlesschrome python3 -m robot tests/InstagramTests.robot
 
     - name: Deploy to production
       if: success()

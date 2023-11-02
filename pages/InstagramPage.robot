@@ -5,7 +5,7 @@ Variables    ../locators/Locators.py
 
 *** Keywords ***
 Aller sur la page Instagram
-   Open Browser   ${Datas.UrlInsta}    headlesschrome
+   Open Browser   ${Datas.UrlInsta}    chrome
    Maximize Browser Window
    Set Selenium Implicit Wait    15s
    Click Element    ${PLocaters.AccepterCookies}
@@ -55,3 +55,4 @@ Vérifier le message d'erreur pour le nom d'utilisateur invalide
     Should Be Equal       ${actual_textInvalideNom}     ${Datas.expectedTextPourIncorrectNomDeUtilisateur}
 
 Essaye de te connecter avec un nom d'utilisateur et un mot de passe vides
+    Vérifier Que Vous etes Sur La Page Instagram
