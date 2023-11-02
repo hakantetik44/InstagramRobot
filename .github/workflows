@@ -1,35 +1,47 @@
-name: CI/CD Pipeline
+# Nom du pipeline CI/CD
+name: Pipeline CI/CD
 
+# Déclencheurs
 on:
   push:
     branches:
       - main
 
+# Tâches
 jobs:
   build:
+    # Machine virtuelle sur laquelle l'exécution aura lieu
     runs-on: ubuntu-latest
 
+    # Étapes
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.x
+      # Vérification du code
+      - name: Vérification du code
+        uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: |
-        python3 -m venv venv
-        source venv/bin/activate
-        pip install -r requirements.txt
-        pip install robotframework-seleniumlibrary
+      # Installation de Python
+      - name: Installation de Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
 
-     name: Run tests
-      run: |
-        source venv/bin/activate
-        BROWSER=headlesschrome python3 -m robot tests/InstagramTests.robot
+      # Installation des dépendances
+      - name: Installation des dépendances
+        run: |
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
+          pip install robotframework-seleniumlibrary
 
-    - name: Deploy to production
-      if: success()
-      run: ./deploy.sh
+      # Exécution des tests
+      - name: Exécution des tests
+        run: |
+          source venv/bin/activate
+          # Spécifiez les options du navigateur pour l'exécuter en mode headless selon les paramètres de Robot Framework
+          BROWSER=headlesschrome python3 -m robot tests/InstagramTests.robot
+
+      # Déploiement en production
+      - name: Déploiement en production
+        if: success()
+        run: ./deploy.sh
