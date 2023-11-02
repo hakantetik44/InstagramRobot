@@ -68,9 +68,9 @@ Laisser et Vérifier les champs d'utilisateur et de mot de passe vides
   ${element_textPassword}   Get Text   ${Plocaters.placePassword}
   Should Be Empty   ${element_textPassword}
 
-  ${is_disabled}   Element Should Be Disabled    ${PLocaters.btnSeconnectter}
-  Run Keyword If    "${is_disabled}" == "True"
-  Element Should Be Disabled    ${PLocaters.btnSeconnectter}
+ ${is_disabled} = Element Should Be Disabled    ${PLocaters.btnSeconnectter}
+ Run Keyword If    ${is_disabled} == "True"
+ Log    Element is disabled
 
 
 
