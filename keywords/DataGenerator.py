@@ -1,6 +1,10 @@
-from faker import Faker
+from robot.api import logger
 
-fake = Faker()
+def ButtonIsDisabled():
+    bouton = "xpath=//button[@type='submit']"
 
-def generate_fake_email():
-    return fake.email()
+    # Vérifiez si le bouton est désactivé
+    if not bouton.enabled:
+        print("Le bouton est désactivé.")
+    else:
+        print("Le bouton est activé.")

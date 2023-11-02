@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    OperatingSystem
 Variables    ../keywords/Data.py
 Variables    ../locators/Locators.py
 
@@ -31,6 +32,7 @@ Vérifier avec succès que la page Instagram a été connectée
 
 
 Entrer le dot de passe invalide
+
        Input Text      ${PLocaters.placeNomDeUtilasateur}   ${Datas.Email}
        Input Text      ${Plocaters.placePassword}    ${Datas.invalidPassword}
        Sleep    2s
@@ -44,6 +46,7 @@ Vérifier le message d'erreur pour le mot de passe
 
 
 Entrer le nom d'utilisateur invalide
+
         Input Text      ${PLocaters.placeNomDeUtilasateur}   ${Datas.invalidNomDeUtilisateur}
         Input Text      ${Plocaters.placePassword}    ${Datas.Password}
         Sleep    2s
@@ -54,5 +57,21 @@ Vérifier le message d'erreur pour le nom d'utilisateur invalide
     ${actual_textInvalideNom}   Get Text    ${PLocaters.MessageNomDeUtilisateurIncorrect}
     Should Be Equal       ${actual_textInvalideNom}     ${Datas.expectedTextPourIncorrectNomDeUtilisateur}
 
-Essaye de te connecter avec un nom d'utilisateur et un mot de passe vides
-    Vérifier Que Vous etes Sur La Page Instagram
+
+Laisser et Vérifier les champs d'utilisateur et de mot de passe vides
+
+  ${element_textUsername}  Get Text  ${PLocaters.placeNomDeUtilasateur}
+  Should Be Empty  ${element_textUsername}
+
+
+
+  ${element_textPassword}   Get Text   ${Plocaters.placePassword}
+  Should Be Empty   ${element_textPassword}
+
+  ${is_disabled}   Element Should Be Disabled    ${PLocaters.btnSeconnectter}
+  Run Keyword If    "${is_disabled}" == "True"
+  Element Should Be Disabled    ${PLocaters.btnSeconnectter}
+
+
+
+
