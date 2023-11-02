@@ -25,10 +25,9 @@ jobs:
         pip install -r requirements.txt
         pip install robotframework-seleniumlibrary
 
-    - name: Run tests
+     name: Run tests
       run: |
         source venv/bin/activate
-        # Robot Framework ayarlarına göre başsız bir modda çalıştırmak için tarayıcı seçeneklerini belirtin
         BROWSER=headlesschrome python3 -m robot tests/InstagramTests.robot
 
     - name: Deploy to production
