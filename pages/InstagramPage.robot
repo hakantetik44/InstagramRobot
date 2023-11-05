@@ -7,7 +7,6 @@ Variables    ../locators/Locators.py
 *** Keywords ***
 Aller sur la page Instagram
    Open Browser   ${Datas.UrlInsta}    chrome    options=add_argument("--headless")
-
    Maximize Browser Window
    Set Selenium Implicit Wait    15s
    Click Element    ${PLocaters.AccepterCookies}
